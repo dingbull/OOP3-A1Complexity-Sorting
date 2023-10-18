@@ -62,6 +62,14 @@ public class MainApp {
             } else if ("q".equals(algorithm)) {
                 SortUtils.quickSort(shapes, sortType, 0, shapes.length - 1);
             }
+            else if ("i".equals(algorithm)) 
+            {
+                SortUtils.insertionSort(shapes, sortType);
+            }
+            else if ("h".equals(algorithm)) 
+            {
+                SortUtils.heapSort(shapes, sortType);
+            }
 
             // Stop timing
             long endTime = System.currentTimeMillis();
