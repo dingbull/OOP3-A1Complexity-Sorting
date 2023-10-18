@@ -1,0 +1,54 @@
+Project Name 
+ComplexityAndSorting
+
+Overview
+This project is written in Java SE 1.8 and aims to perform sorting on three-dimensional geometric shapes based on attributes like height, volume, and base area. Additionally, it includes performance benchmarking for six different sorting algorithms.
+
+Table of Contents 
+Requirements
+Installation
+Project Structure
+Configuration
+Troubleshooting & FAQ
+
+Requirements
+JDK 1.8 or higher
+Command-line interface for running the project
+
+Installation
+Clone the GitHub repository to your local machine.
+Open the project using a Java-supported IDE.
+Build and run the project as per the instructions provided in the project.
+
+How to Run
+To execute the project, use the following command pattern:
+java -jar sort.jar -ffile_name -tv -sb
+The flags stand for:
+-f or -F: File name and path containing the shapes
+-t or -T: Type of comparison (volume, height, or base area)
+-s or -S: Sorting algorithm to be used, followed by b (bubble), s (selection), i (insertion), m (merge), q (quick) or h
+(heap)
+
+Example:
+java -jar sort.jar -fpolyfor1.txt -Tv -Sb
+java -jar sort.jar -ta -sQ -f"res\polyfor3".txt
+• java -jar sort.jar -tH -F"C:\temp\polyfor5.txt" –sB
+
+Project Structure
+src/main: Contains the MainApp.java file, responsible for running the program.
+src/shapes: Contains the abstract Shape.java class and its derivatives like Cylinder.java, Cone.java, Prism.java, and Pyramid.java.
+src/utils: Includes six different sorting algorithms. Houses the SortUtils.java utility class.
+Packages and Classes
+main: Contains MainApp.java which serves as the testing program.
+shapes: Contains the Shape.java abstract class and its derived classes (Cylinder.java, Cone.java, Prism.java, Pyramid.java).
+utils: Contains SortingUtility.java utility class for sorting. Includes classes for each sorting algorithm (BubbleSort.java, InsertionSort.java, SelectionSort.java, MergeSort.java, QuickSort.java, HeapSort.java).
+
+
+Configuration
+The project accepts command line arguments for specifying the file, the sorting type, and the attribute by which the shapes should be sorted. Make sure to place your input text files in the res directory. Detailed usage instructions can be found in the README.
+
+Troubleshooting & FAQ
+Q: The program is not sorting correctly.
+A: Make sure you have followed the correct command line syntax. Refer to the README for more information.
+Q: How do I choose a sorting algorithm?
+A: The sorting algorithm can be specified through command line options.
