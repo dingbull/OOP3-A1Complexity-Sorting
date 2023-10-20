@@ -1,0 +1,35 @@
+Heap Sort Algorithm
+
+Description:
+	The heap sort algorithm turns the array data into an unordered binary tree data structure. This is a hierarchical structure where each piece of data is arranged like the downturned branches of a tree, with each data point representing an alternative branch along the tree that connects to one or more other data points. Using this structure, heap sort arranges each branch so that the largest numbers are higher up on the branch system than the lower numbers. This means that when reading the data points from top to bottom, following the flow of the branches, each data point will be lower than the number coming before it. Once each data point is organized correctly within the structure, following the requirements of the previous statement, the Root, or maximum value in the tree, is removed from the structure and the next value is moved into its place. This process is repeated, organizing each data point in descending order from top to bottom and then removing the Root value until no other values remain. This will return the sorted array in order of removed values, where the first number was removed last and the last number was removed first. This makes an ascending-ordered array. To return a descending-ordered array, the algorithm must be set to instead set the lowest value as the root. All other steps are the same, just reversed -- moving the lowest number to the root, deleting it, and repeating the process for all numbers until the last one, the largest, is deleted.
+
+Complexity Analysis:
+Steps of descending order heap sorting in pseudo-code:
+buildHeap(array) {
+	for (index equals the array length minus two)
+		heapify(array, array length, index);
+	for (index equals the array length minus one)
+		Swap items at array index 0 and array index i to remove the root
+		heapify(array, index, 0);
+}
+Time complexity of buildHeap is O(n)
+
+heapify(array, array length, index) {
+	set variables minimum value to root, left child to the index plus one, and right child to the index plus two
+	
+	if (left child is less than the array length and minimum value)
+		set minimum value to left child;
+	else 
+		set minimum value to i;
+
+	if (right child is less than the array length and minimum value)
+		set minimum value to right child;
+
+	if the minimum value is not equal to the root
+		Swap items at array index i and minimum
+		heapify(array, length, minimum);
+}
+Time complexity of heapify is O(log n)
+
+Time complexity of the complete heap sort process is O(n log n)
+	
